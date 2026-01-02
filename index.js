@@ -2,6 +2,8 @@ const searchBar = document.querySelector('#search');
 const fetchBtn = document.querySelector('#fetch-btn');
 const img = document.querySelector('img');
 
+searchBar.value = "Welcome"
+
 fetchBtn.addEventListener('click', () => {
     console.log('fetch button clicked');
     fetchImg();
@@ -20,3 +22,6 @@ function fetchImg(){
         console.log(e);
     })
 }
+
+fetchImg();
+searchBar.value = '';
