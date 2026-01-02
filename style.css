@@ -1,7 +1,9 @@
 * {
     font-family: 'Courier New', Courier, monospace;
 }
-
+h1 {
+    text-align: center;
+}
 #search, img, #fetch-btn {
     padding: 5px;
     border: 1px solid gray;
