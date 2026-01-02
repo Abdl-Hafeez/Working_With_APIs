@@ -14,6 +14,9 @@ function fetchImg(){
     if(!searchedGif) return;
     fetch(`https://api.giphy.com/v1/gifs/translate?api_key=b0hiqX3ayPBlGeutCVjskgabGhDAJZjN&s=${searchedGif}`)
     .then(function(response) {
+        if(!response.ok) {
+            throw new Error(`HTTP Error! Status: ${response.status}`)
+       }
         return response.json(); 
     }).then(function(response) {
         console.log(response.data.images.original.url);
